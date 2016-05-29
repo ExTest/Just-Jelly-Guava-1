@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Week4HomeWork" parallel="tests" thread-count="2">
+<groups>
+<run>
+<include name="S.*"></include>
+</run></groups>
+  <test verbose="2" name="Lead">
+  <parameter name="Browser" value ="Chrome"/>
+    <classes>
+      <class name="testNGProject.CreateLeadTest" />
+      <class name="testNGProject.EditLeadTest"/>
+      <class name="testNGProject.DeleteLeadTest"/>
+      <class name="testNGProject.MergeLeadTest"/>
+    </classes>
+  </test> <!-- Default test -->
+   <test verbose="2" name="Contact">
+ <parameter name="Browser" value ="Firefox"/>
+    <classes>
+     <class name="testNGProject.CreateContactTest"/>
+     <class name="testNGProject.EditContactTest"/>
+     <class name="testNGProject.DeleteContactTest"/>
+     <class name="testNGProject.MergeContactTest"/>
+    </classes>
+  </test>
+   
+</suite> <!-- Default suite -->

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Week4HomeWork]" parallel="tests">
+  <parameter name="Browser" value="Chrome"/>
+  <test name="Lead(failed)" parallel="tests">
+    <parameter name="Browser" value="Chrome"/>
+    <groups>
+      <run>
+        <include name="S.*"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testNGProject.EditLeadTest">
+        <methods>
+          <include name="Login"/>
+          <include name="CloseBrowser1"/>
+        </methods>
+      </class> <!-- testNGProject.EditLeadTest -->
+      <class name="testNGProject.DeleteLeadTest">
+        <methods>
+          <include name="deleteLead"/>
+          <include name="Login"/>
+          <include name="CloseBrowser1"/>
+        </methods>
+      </class> <!-- testNGProject.DeleteLeadTest -->
+      <class name="testNGProject.CreateLeadTest">
+        <methods>
+          <include name="Login"/>
+          <include name="createLead"/>
+          <include name="CloseBrowser1"/>
+        </methods>
+      </class> <!-- testNGProject.CreateLeadTest -->
+    </classes>
+  </test> <!-- Lead(failed) -->
+</suite> <!-- Failed suite [Week4HomeWork] -->
